@@ -1,0 +1,10 @@
+<div style="display: flex; align-items: flex-start;">
+    <ul>
+        @for (user of users; track user) {
+            <li [routerLink]="[user.login]" routerLinkActive="active">
+                <app-user-item [user]="user"></app-user-item>
+            </li>
+        }
+    </ul>
+    <router-outlet></router-outlet>
+</div>
